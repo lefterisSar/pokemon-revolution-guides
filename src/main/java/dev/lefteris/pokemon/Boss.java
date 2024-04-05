@@ -18,6 +18,7 @@ public class Boss {
     private String cooldown;
     private List<Pokemon> lineup;
     private Rewards rewards;
+    private String difficulty;
 
 }
 

@@ -8,13 +8,13 @@ import Home from "./components/home/Home";
 
 function App() {
 
-  const [movies,setMovies] = useState([]);
-  const getMovies= async ()=>
+  const [bosses,setBosses] = useState([]);
+  const getBosses= async ()=>
   {
     try
     {
-      const response = await api.get("/api/v1/movies");
-      setMovies(response.data)
+      const response = await api.get("/api/bosses");
+      setBosses(response.data)
       console.log(response.data)
     }
     catch (err){
@@ -24,17 +24,16 @@ function App() {
 
 
   useEffect(()=>{
-    getMovies();
+    getBosses();
   },[])
 
 
 
   return (
     <div className="App">
-
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route path="/" element={<Home movies={movies}/>}/>
+          <Route path="/" element={<Home bosses={bosses}/>}/>
         </Route>
       </Routes>
 

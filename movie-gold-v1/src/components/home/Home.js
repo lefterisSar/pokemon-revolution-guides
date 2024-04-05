@@ -1,10 +1,10 @@
 import React from "react";
-import Hero from "../hero/hero";
+import CreateBoss from "../BossesComponents/CreateBoss";
 
 
-const Home = ({movies}) => {
+const Home = ({bosses}) => {
     return (
-       <Hero movies={movies}/>
+       <CreateBoss bosses={bosses}/>
     )
 }
 
